@@ -5,13 +5,14 @@
 
         // Get List of images from server
         getFeed = function () {
-            $scroller.empty();
-            $.ajax({url: serverURL + "/images", dataType: "json", type: "GET"}).done(function (data) {
-                var l = data.length;
-                for (var i = 0; i < l; i++) {
-                    $scroller.append('<img src="' + serverURL + '/' + data[i].fileName + '"/>');
-                }
-            });
+            // $scroller.empty();
+            // $.ajax({url: serverURL + "/images", dataType: "json", type: "GET"}).done(function (data) {
+            //     var l = data.length;
+            //     for (var i = 0; i < l; i++) {
+            //         $scroller.append('<img src="' + serverURL + '/' + data[i].fileName + '"/>');
+            //     }
+            // });
+            alert("Imagen Subida");
         },
 
         // Upload image to server
