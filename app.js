@@ -5,7 +5,7 @@
 
         // Get List of images from server
         getFeed = function () {
-           $('.scroller').css({display:none;})
+            // $scroller.empty();
             // $.ajax({url: serverURL + "/images", dataType: "json", type: "GET"}).done(function (data) {
             //     var l = data.length;
             //     for (var i = 0; i < l; i++) {
@@ -30,7 +30,6 @@
 
             ft.upload(imageURI, serverURL + "/images",
                 function (e) {
-                    $('.scroller').css({height:100%; width:100%;position:fixed; z-index:1000000000; top:0; bottom:0;})
                     getFeed();
                 },
                 function (e) {
