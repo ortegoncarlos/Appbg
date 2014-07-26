@@ -215,7 +215,7 @@ width: 30%;
   text-shadow: none; }
 
 .flip-clock-divider.minutes .flip-clock-label {
-  right: -88px; }
+  right: -104px; }
 
 .flip-clock-divider.seconds .flip-clock-label {
   right: -91px; }
@@ -457,7 +457,7 @@ width: 100%;
 }
   span.flip-clock-label {}
   span.flip-clock-divider.days {
-      left: 80vw;
+      left: 20vw;
       top: -20vw;
   }
 .flip-clock-wrapper a {
@@ -497,11 +497,11 @@ width: 100%;
 .flip-clock-wrapper {
   text-align: center;
   position: relative;
-  width: 100%;
+  width: 37%;
   margin: 1em 0 0 0;
   /* height: 10%; */
   display: block;
-  height: 34%;
+  height: 19%;
 }
 
 .flip-clock-wrapper:before,
@@ -632,7 +632,7 @@ width: 100%;
   float: left;
   display: inline-block;
   position: relative;
-  width: 60vw;
+  /* width: 60vw; */
   height: 20vw; }
 
 .flip-clock-divider:first-child {
@@ -653,17 +653,17 @@ width: 100%;
 .flip-clock-divider .flip-clock-label {
   position: absolute;
   top: 2.5em;
-  right: 36vw;
+  right: -22vw;
   color: black;
   text-shadow: none; 
   font-size: 10vw;
 }
 
 .flip-clock-divider.minutes .flip-clock-label {
-  right: 25vw; }
+  right: -33vw; }
 
 .flip-clock-divider.seconds .flip-clock-label {
-  right: 17vw; }
+  right: -41vw; }
 
 .flip-clock-dot.top {
   top: 30px; }
