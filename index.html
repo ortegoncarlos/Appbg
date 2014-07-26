@@ -224,7 +224,13 @@
     }, false);
     $( ".schedule" ).click(function()
     {
-        window.plugin.notification.local.add({ message: 'Great app!' });
+
+            document.addEventListener('deviceready', function () {
+                window.plugin.notification.local.add({ message: 'Great app!' });
+
+            });
+
+
     }
 
         )
