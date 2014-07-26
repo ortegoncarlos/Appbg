@@ -84,10 +84,11 @@
         </div>
 
         <div data-role="content">
+            <div class="scroller"></div>
             <div class="piedepag">
 
                     <div class="round-buttonphoto">
-                        <a href="#">
+                        <a class="camera-btn" href="#">
                             <img src="images/photoicon.svg" alt="Home"/>
                         </a>
                     </div>
@@ -104,7 +105,7 @@
                     <button type="button" href="#">Compartir</button>
                 </div>
 
-
+            <script src="app.js"></script>
             </div>
         </div>
 
@@ -136,7 +137,7 @@
                 var currentDate = new Date();
 
                 // Set some date in the past. In this case, it's always been since Jan 1
-                var pastDate  = new Date("2014/08/06 12:12:00");
+                var pastDate  = new Date("2013/08/06 12:12:00");
 
                 // Calculate the difference in seconds between the future and current date
 
