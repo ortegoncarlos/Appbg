@@ -12,7 +12,6 @@
             //         $scroller.append('<img src="' + serverURL + '/' + data[i].fileName + '"/>');
             //     }
             // });
-            alert("Imagen Subida");
         },
 
         // Upload image to server
@@ -31,6 +30,8 @@
             ft.upload(imageURI, serverURL + "/images",
                 function (e) {
                     getFeed();
+                    alert("Imagen Subida");
+
                 },
                 function (e) {
                     alert("Upload failed");
