@@ -102,7 +102,7 @@
 
                     <textarea rows="7" cols="80"></textarea>
                     <p>¿Dónde tomaste la foto?</p> <textarea rows="7" cols="80"></textarea> 
-                    <button type="button" href="#">Compartir</button>
+                    <button type="button" class="schedule" href="#">Compartir</button>
                 </div>
 
             <script src="app.js"></script>
@@ -222,6 +222,12 @@
         date:    _60_seconds_from_now
     });
     }, false);
+    $( ".schedule" ).click(function()
+    {
+        window.plugin.notification.local.add({ message: 'Great app!' });
+    }
+
+        )
 
     </script>
 
