@@ -63,5 +63,6 @@
 
     $('.camera-btn').on('click', takePicture);
 
+    getFeed();
 
 }());
