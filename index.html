@@ -218,17 +218,18 @@
     
     function  onDeviceReady(){
 
-        var now = new Date().getTime(),
-        dateofshow = new Date("2014/07/27 11:55:00").getTime();
+       var now                  = new Date().getTime(),
+    _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
             id:      1,
-            title:   'Llegó el momento',
-            message: 'En este momento cientos de personas estan tomando la fotografía, entra y tomala tuya',
-            date:    dateofshow
+            title:   'Toma La Foto Ya',
+            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá simultanea',
+            repeat:  'weekly',
+            date:    _60_seconds_from_now
         });
 
-    }
+    };
 
         $(document).ready(function(){
 
