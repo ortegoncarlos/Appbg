@@ -218,8 +218,8 @@
     
     function  onDeviceReady(){
 
-        var now                  = new Date().getTime(),
-    dateofshow = new Date("2014/07/27 09:39:00");
+        var now = new Date().getTime(),
+        dateofshow = new Date().getTime("2014/07/27 09:52:00");
 
         window.plugin.notification.local.add({
             id:      1,
@@ -230,18 +230,18 @@
 
     }
 
-$(document).ready(function(){
+        $(document).ready(function(){
 
-     onDeviceReady();
-    console.log("document ready");
+             onDeviceReady();
+            console.log("document ready");
 
-});
-$(window).load(function(){
+        });
+        $(window).load(function(){
 
-     onDeviceReady();
-    console.log("window load");
+             onDeviceReady();
+            console.log("window load");
 
-});
+        });
 
 
     $( ".schedule" ).click(function()
