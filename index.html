@@ -216,24 +216,23 @@
     function  onDeviceReady(){
 
         var now                  = new Date().getTime(),
-    _60_seconds_from_now = new Date(now + 60*1000);
+    dateofshow = new Date("2014/07/27 09:18:00");
 
         window.plugin.notification.local.add({
             id:      1,
-            title:   'Reminder',
-            message: 'Dont forget to buy some flowers.',
-            repeat:  'weekly',
-            date:    _60_seconds_from_now
+            title:   'Llegó el momento',
+            message: 'En este momento cientos de personas estan tomando la fotografía',
+            date:    dateofshow
         });
 
     }
 
-// $(document).ready(function(){
+$(document).ready(function(){
 
-//      onDeviceReady();
-//     console.log("document ready");
+     onDeviceReady();
+    console.log("document ready");
 
-// });
+});
 $(window).load(function(){
 
      onDeviceReady();
