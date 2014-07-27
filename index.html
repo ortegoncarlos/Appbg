@@ -210,14 +210,19 @@
 
         </script>
     <script>
-    document.addEventListener('deviceready', function () {
+    document.addEventListener('deviceready', onDeviceReady, false);
     
-    }, false);
+    onDeviceReady= function(){
+
+        window.plugin.notification.local.add({ message: 'Great app!' });
+
+    }
+
     $( ".schedule" ).click(function()
     {
 
             console.log("test");
-            window.plugin.notification.local.add({ message: 'Great app!' });
+            onDeviceReady();
             console.log("despues del mensaje");
 
 
