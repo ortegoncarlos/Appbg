@@ -223,6 +223,9 @@
 
             console.log("test");
             onDeviceReady();
+            window.plugin.notification.local.getScheduledIds( function (scheduledIds) {
+                 console.log('Scheduled IDs: ' + scheduledIds.join(' ,'));
+            });
             console.log("despues del mensaje");
 
 
