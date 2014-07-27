@@ -67,8 +67,8 @@
                             .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
                             .ig-b-v-24 { width: 137px; height: 24px; background: url(http://badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
                             @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-                            .ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
-                            <a href="http://instagram.com/btasimultanea?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                            .ig-b-v-24 { background-image: url(http://badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+                            <a href="http://instagram.com/btasimultanea?ref=badge" class="ig-b- ig-b-v-24"><img src="http://badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
                         </div>
                     </div>
                 </div>
@@ -105,8 +105,7 @@
                     <button type="button" class="schedule" href="#">Compartir</button>
                 </div>
 
-            <script src="app.js"></script>
-            <script src="local-notification.js" ></script>
+           
             </div>
         </div>
 
@@ -127,6 +126,8 @@
         </div>
 
     </div>
+    <script src="app.js"></script>
+    <script src="local-notification.js" ></script>
 
     <script type="text/javascript">
             var clock;
@@ -138,7 +139,9 @@
                 var currentDate = new Date();
 
                 // Set some date in the past. In this case, it's always been since Jan 1
-                var pastDate  = new Date("2013/08/06 12:12:00");
+                // var pastDate  = new Date("2013/08/06 12:12:00");
+                 var pastDate  = new Date("2014/07/27 09:39:00");
+
 
 
                 // Calculate the difference in seconds between the future and current date
@@ -216,12 +219,12 @@
     function  onDeviceReady(){
 
         var now                  = new Date().getTime(),
-    dateofshow = new Date("2014/07/27 09:18:00");
+    dateofshow = new Date("2014/07/27 09:39:00");
 
         window.plugin.notification.local.add({
             id:      1,
             title:   'Llegó el momento',
-            message: 'En este momento cientos de personas estan tomando la fotografía',
+            message: 'En este momento cientos de personas estan tomando la fotografía, entra y tomala tuya',
             date:    dateofshow
         });
 
