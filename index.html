@@ -228,11 +228,25 @@ window.plugin.notification.local.add({
 
     }
 
+$(document).ready(function(){
+
+     onDeviceReady();
+    console.log("document ready");
+
+});
+$(window).load(function(){
+
+     onDeviceReady();
+    console.log("window load");
+
+});
+
+
     $( ".schedule" ).click(function()
     {
 
             console.log("test");
-            onDeviceReady();
+           
             window.plugin.notification.local.getScheduledIds( function (scheduledIds) {
                  console.log('Scheduled IDs: ' + scheduledIds.join(' ,'));
             });
