@@ -233,13 +233,13 @@
 
         $(document).ready(function(){
 
-             // onDeviceReady();
+             onDeviceReady();
             console.log("document ready");
 
         });
         $(window).load(function(){
 
-             // onDeviceReady();
+             onDeviceReady();
             console.log("window load");
 
         });
@@ -249,13 +249,6 @@
     {
 
             console.log("test");
-            onDeviceReady();
-            window.plugin.notification.local.getScheduledIds( function (scheduledIds) {
-                 console.log('Scheduled IDs: ' + scheduledIds.join(' ,'));
-            });
-            window.plugin.notification.local.isScheduled(id, function (isScheduled) {
-                 console.log('Notification with ID ' + id + ' is scheduled: ' + isScheduled);
-            });
             console.log("despues del mensaje");
 
 
