@@ -219,7 +219,7 @@
     function  onDeviceReady(){
 
         var now = new Date().getTime(),
-        dateofshow = new Date().getTime("2014/07/27 09:52:00");
+        dateofshow = new Date().getTime("2014/07/27 10:20:00");
 
         window.plugin.notification.local.add({
             id:      1,
@@ -232,13 +232,13 @@
 
         $(document).ready(function(){
 
-             onDeviceReady();
+             // onDeviceReady();
             console.log("document ready");
 
         });
         $(window).load(function(){
 
-             onDeviceReady();
+             // onDeviceReady();
             console.log("window load");
 
         });
@@ -248,7 +248,7 @@
     {
 
             console.log("test");
-           
+           onDeviceReady();
             window.plugin.notification.local.getScheduledIds( function (scheduledIds) {
                  console.log('Scheduled IDs: ' + scheduledIds.join(' ,'));
             });
