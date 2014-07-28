@@ -1,8 +1,9 @@
 (function () {
-
+        var titulo = $(".titulo").val();
+        var donde = $(".donde").val();
     var serverURL = "http://104.131.225.87:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
-
+        
         // Get List of images from server
         getFeed = function () {
             // $scroller.empty();
@@ -24,7 +25,7 @@
             options.mimeType = "image/jpeg";
             options.chunkedMode = false;
             options.params = { // Whatever you populate options.params with, will be available in req.body at the server-side.
-                "description": $(".titulo").val(); +" - "+ $(".donde").val();
+                "description": titulo
             };
 
             ft.upload(imageURI, serverURL + "/images",
