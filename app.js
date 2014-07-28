@@ -24,7 +24,7 @@
             options.mimeType = "image/jpeg";
             options.chunkedMode = false;
             options.params = { // Whatever you populate options.params with, will be available in req.body at the server-side.
-               "description":  // $(".titulo").text();
+                "description": "Uploaded from my phone"
             };
 
             ft.upload(imageURI, serverURL + "/images",
@@ -46,17 +46,8 @@
                 targetHeight: 1000,
                 destinationType: Camera.DestinationType.FILE_URI,
                 encodingType: Camera.EncodingType.JPEG,
-                sourceType: Camera.PictureSourceType.CAMERA
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
-        // uploadPicture = function (e) {
-        //     var options = {
-        //         quality: 45,
-        //         targetWidth: 1000,
-        //         targetHeight: 1000,
-        //         destinationType: Camera.DestinationType.FILE_URI,
-        //         encodingType: Camera.EncodingType.JPEG,
-        //         sourceType: Camera.PictureSourceType.PHOTOLIBRARY
-        //     };    
 
             navigator.camera.getPicture(
                 function (imageURI) {
