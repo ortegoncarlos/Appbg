@@ -72,7 +72,6 @@
         };
 
     $('.camera-btn').on('click', takePicture);
-    $('.carrete-btn').on('click', uploadPicture);
 
     getFeed();
 
