@@ -48,6 +48,15 @@
                 encodingType: Camera.EncodingType.JPEG,
                 sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
+        uploadPicture = function (e) {
+            var options = {
+                quality: 45,
+                targetWidth: 1000,
+                targetHeight: 1000,
+                destinationType: Camera.DestinationType.FILE_URI,
+                encodingType: Camera.EncodingType.JPEG,
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+            };    
 
             navigator.camera.getPicture(
                 function (imageURI) {
@@ -63,6 +72,7 @@
         };
 
     $('.camera-btn').on('click', takePicture);
+    $('.carrete-btn').on('click', uploadPicture);
 
     getFeed();
 

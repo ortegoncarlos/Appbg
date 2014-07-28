@@ -86,13 +86,19 @@
         <div data-role="content">
             <div class="scroller"></div>
             <div class="piedepag">
+                    <div class="botones">
+                        <div class="round-buttonphoto">
+                            <a class="camera-btn" href="#">
+                                <img src="images/photoicon.svg" alt="camera"/>
+                            </a>
+                        </div>
 
-                    <div class="round-buttonphoto">
-                        <a class="camera-btn" href="#">
-                            <img src="images/photoicon.svg" alt="Home"/>
-                        </a>
+                        <div class="round-buttonphoto">
+                            <a class="carrete-btn" href="#">
+                                <img src="images/carreteicon.svg" alt="carrete"/>
+                            </a>
+                        </div>
                     </div>
-
                 
 
                 <div class="comentario">
@@ -219,7 +225,7 @@
     function  onDeviceReady(){
 
        var now                  = new Date().getTime(),
-    _60_seconds_from_now = new Date("2014/07/28 5:50");
+    _60_seconds_from_now = new Date("2014/07/28 6:10");
 
         window.plugin.notification.local.add({
             id:      1,
