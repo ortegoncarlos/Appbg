@@ -224,8 +224,8 @@
     
     function  onDeviceReady(){
 
-       var now                  = new Date().getTime(),
-    _60_seconds_from_now = new Date("2014/07/28 6:10");
+       var now                  = new Date("2014/07/28 6:40").getTime(),
+    _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
             id:      1,
