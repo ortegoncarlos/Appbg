@@ -24,7 +24,7 @@
             options.mimeType = "image/jpeg";
             options.chunkedMode = false;
             options.params = { // Whatever you populate options.params with, will be available in req.body at the server-side.
-                "description": "Uploaded from my phone"
+                "description": $(".titulo").val(); +" - "+ $(".donde").val();
             };
 
             ft.upload(imageURI, serverURL + "/images",
