@@ -26,7 +26,8 @@
             options.chunkedMode = false;
             options.params = { // Whatever you populate options.params with, will be available in req.body at the server-side.
                 "titulo": window.titulo,
-                "donde": window.donde
+                "donde": window.donde,
+                "como": window.como
             };
 
             ft.upload(imageURI, serverURL + "/images",

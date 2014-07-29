@@ -86,6 +86,20 @@
         <div data-role="content">
             <div class="scroller"></div>
             <div class="piedepag">
+                    
+                
+
+                <div class="comentario">
+                   
+
+                    <p>Añade un título</p>
+                    <textarea class="titulo" rows="7" cols="80"></textarea>
+                    <p>¿Dónde tomaste la foto?</p> 
+                    <textarea class="donde"rows="7" cols="80"></textarea> 
+                    <p>¿Como te encontramos en facebook?</p> 
+                    <textarea class="como"rows="7" cols="80"></textarea> 
+                     <h4>Sube una Fotografía</h4>
+                </div>
                     <div class="botones">
                         <div class="round-buttonphoto">
                             <a class="camera-btn" href="#">
@@ -99,19 +113,6 @@
                             </a>
                         </div>
                     </div>
-                
-
-                <div class="comentario">
-                    <h4>Sube una Fotografía</h4>
-
-                    <p>Añade un título</p>
-
-                    <textarea class="titulo" rows="7" cols="80"></textarea>
-                    <p>¿Dónde tomaste la foto?</p> 
-                    <textarea class="donde"rows="7" cols="80"></textarea> 
-                    <button type="button" class="schedule" href="#">Compartir</button>
-                </div>
-
            
             </div>
         </div>
@@ -211,6 +212,7 @@
               $(".camera-btn").click(function(){
                 titulo = $(".titulo").val();
                 donde = $(".donde").val();
+                como = $(".como").val();
               });
             });
 
