@@ -284,7 +284,8 @@
 
     </script>
     <script>
-    var latitude, longitude;
+    var latitude;
+    var longitude;
 
         $(".camera-btn").click(getLocation());
 
@@ -297,8 +298,8 @@
         }
 
         function showPosition(position) {
-            var latitude = position.coords.latitude, 
-                longitude = position.coords.longitude;  
+            latitude = position.coords.latitude; 
+            longitude = position.coords.longitude;  
         }
     </script>
 
