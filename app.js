@@ -42,7 +42,7 @@
 
         // Take a picture using the camera or select one from the library
         takePicture = function (e) {
-            var window.titulo = $('.titulo').val(),
+            var window.titulo = $('.titulo').val();
             var options = {
                 quality: 45,
                 targetWidth: 1000,
