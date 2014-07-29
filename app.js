@@ -3,7 +3,7 @@
         var donde = $(".donde").val();
     var serverURL = "http://104.131.225.87:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
-        titulo = $('.titulo').val(),
+        window.titulo = $('.titulo').val(),
         
         // Get List of images from server
         getFeed = function () {
