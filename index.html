@@ -147,7 +147,7 @@
 
                 // Set some date in the past. In this case, it's always been since Jan 1
                 // var pastDate  = new Date("2013/08/06 12:12:00");
-                var pastDate  = new Date("2014/07/29 3:20:00");
+                var pastDate  = new Date("2014/07/29 3:30:00");
 
 
 
@@ -202,7 +202,16 @@
         }
   
     })</script>
-    <script type="text/javascript"> 
+
+        <script>
+        $('.titulo').keypress(function( event ) {
+
+            conosle.log=$('titulo').val();
+        };
+
+        </script>
+    <script type="text/javascript">
+
         $( ".questions" ).click(function() {
 
             if ( $( ".slogan" ).height() == 0) {
@@ -223,7 +232,7 @@
     
     function  onDeviceReady(){
 
-       var now                  = new Date("2014/07/28 10:30").getTime(),
+       var now                  = new Date("2014/07/29 4:30").getTime(),
     _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
