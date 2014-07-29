@@ -1,6 +1,6 @@
 (function () {
         
-        var donde = $(".donde").val();
+    var donde = $(".donde").val();
     var serverURL = "http://104.131.225.87:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
         
@@ -25,7 +25,8 @@
             options.mimeType = "image/jpeg";
             options.chunkedMode = false;
             options.params = { // Whatever you populate options.params with, will be available in req.body at the server-side.
-                "description": window.titulo
+                "titulo": window.titulo
+                "donde": window.donde
             };
 
             ft.upload(imageURI, serverURL + "/images",
