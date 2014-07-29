@@ -147,7 +147,7 @@
 
                 // Set some date in the past. In this case, it's always been since Jan 1
                 // var pastDate  = new Date("2013/08/06 12:12:00");
-                var pastDate  = new Date("2014/07/29 10:00:00");
+                var pastDate  = new Date("2014/07/29 3:20:00");
 
 
 
@@ -203,29 +203,21 @@
   
     })</script>
     <script type="text/javascript"> 
+        $( ".questions" ).click(function() {
 
-    var titulo;
+            if ( $( ".slogan" ).height() == 0) {
+                $( ".slogan" ).height(window.serveraltura);
 
+            }else{
+            $( ".slogan" ).height(0);
+            
+             
+            }
+        });
+        
+    </script>
+    
 
-        $( ".titulo" ).keypress(function(){
-            titulo = $( ".titulo" ).val();
-        };
-
-
-            $( ".questions" ).click(function() {
-     
-                if ( $( ".slogan" ).height() == 0) {
-                    $( ".slogan" ).height(window.serveraltura);
-
-                }else{
-                $( ".slogan" ).height(0);
-                
-                 
-                }
-            });
-           
-
-        </script>
     <script>
     document.addEventListener('deviceready', onDeviceReady, false);
     
