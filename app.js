@@ -1,9 +1,9 @@
 (function () {
-        
+        var window.titulo
         var donde = $(".donde").val();
     var serverURL = "http://104.131.225.87:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
-        window.titulo = $('.titulo').val(),
+
         
         // Get List of images from server
         getFeed = function () {
@@ -42,7 +42,7 @@
 
         // Take a picture using the camera or select one from the library
         takePicture = function (e) {
-
+            var window.titulo = $('.titulo').val(),
             var options = {
                 quality: 45,
                 targetWidth: 1000,
