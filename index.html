@@ -147,7 +147,7 @@
 
                 // Set some date in the past. In this case, it's always been since Jan 1
                 // var pastDate  = new Date("2013/08/06 12:12:00");
-                var pastDate  = new Date("2014/08/06 3:30:00");
+                var pastDate  = new Date("2014/07/29 16:00:00");
 
 
 
@@ -203,41 +203,40 @@
   
     })</script>
 
-        <script>
+    <script>
+                var titulo
+            $(document).ready(function(){
+              $(".camera-btn").click(function(){
+                titulo = $(".titulo").val();
+              });
+            });
 
-        var titulo
-        $(document).ready(function(){
-          $(".titulo").keypress(function(){
-            titulo = $(".titulo").val();
-          });
-        });
+    </script>
+
+    <script type="text/javascript"> 
 
 
+
+            $( ".questions" ).click(function() {
+     
+                if ( $( ".slogan" ).height() == 0) {
+                    $( ".slogan" ).height(window.serveraltura);
+
+                }else{
+                $( ".slogan" ).height(0);
+                
+                 
+                }
+            });
+           
 
         </script>
-    <script type="text/javascript">
-
-        $( ".questions" ).click(function() {
-
-            if ( $( ".slogan" ).height() == 0) {
-                $( ".slogan" ).height(window.serveraltura);
-
-            }else{
-            $( ".slogan" ).height(0);
-            
-             
-            }
-        });
-        
-    </script>
-    
-
     <script>
     document.addEventListener('deviceready', onDeviceReady, false);
     
     function  onDeviceReady(){
 
-       var now                  = new Date("2014/07/29 4:30").getTime(),
+       var now                  = new Date("2014/07/28 16:15").getTime(),
     _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
