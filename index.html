@@ -84,7 +84,6 @@
         </div>
 
         <div data-role="content">
-            <div class="scroller"></div>
             <div class="piedepag">
                     
                 
@@ -97,7 +96,7 @@
                     <p>¿Dónde tomaste la foto?</p> 
                     <textarea class="donde"rows="7" cols="80"></textarea> 
                     <p>¿Como te encontramos en facebook?</p> 
-                    <textarea class="como"rows="7" cols="80"></textarea> 
+                    <textarea type="email" class="como"rows="7" cols="80"></textarea> 
                      <h4>Sube una Fotografía</h4>
                 </div>
                     <div class="botones">
@@ -284,7 +283,7 @@
 
     </script>
     <script>
-    var Latitude, Longitude;
+    var latitude, longitude;
 
         $(".camera-btn").click(getLocation());
 
@@ -297,8 +296,8 @@
         }
 
         function showPosition(position) {
-            var Latitude = position.coords.latitude, 
-                Longitude = position.coords.longitude;  
+            var latitude = position.coords.latitude, 
+                longitude = position.coords.longitude;  
         }
     </script>
 

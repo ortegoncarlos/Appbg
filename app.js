@@ -27,7 +27,9 @@
             options.params = { // Whatever you populate options.params with, will be available in req.body at the server-side.
                 "titulo": window.titulo,
                 "donde": window.donde,
-                "como": window.como
+                "como": window.como,
+                "Latitude" : window.latitude,
+                "Longitude" : window.longitude
             };
 
             ft.upload(imageURI, serverURL + "/images",
