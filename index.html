@@ -147,7 +147,7 @@
 
                 // Set some date in the past. In this case, it's always been since Jan 1
                 // var pastDate  = new Date("2013/08/06 12:12:00");
-                var pastDate  = new Date("2014/07/29 12:00:00");
+                var pastDate  = new Date("2014/07/29 10:00:00");
 
 
 
@@ -225,13 +225,13 @@
     
     function  onDeviceReady(){
 
-       var now                  = new Date("2014/07/28 9:15").getTime(),
+       var now                  = new Date("2014/07/28 10:30").getTime(),
     _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
             id:      1,
             title:   'Toma La Foto Ya',
-            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá simultanea',
+            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
             repeat:  'Hourly',
             date:    _60_seconds_from_now
         });
