@@ -63,9 +63,31 @@
 
             return false;
 
+        },
+        uploadPicture = function (e) {
+            var options = {
+                quality: 45,
+                targetWidth: 1000,
+                targetHeight: 1000,
+                destinationType: Camera.DestinationType.FILE_URI,
+                encodingType: Camera.EncodingType.JPEG,
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+            };
+
+            navigator.camera.getPicture(
+                function (imageURI) {
+                    console.log(imageURI);
+                    upload(imageURI);
+                },
+                function (message) {
+                    // We typically get here because the use canceled the photo operation. Fail silently.
+                }, options);
+
+            return false;
+
         };
 
     $('.camera-btn').on('click', takePicture);
-
+    $('.carrete-btn').on('click', uploadPicture);
 
 }());
