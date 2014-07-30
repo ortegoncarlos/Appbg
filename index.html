@@ -143,7 +143,7 @@
     <script>
     
         var latlon;
-      $(window).load(
+      $(window).load(getLocation());
 
         function getLocation() {
             if (navigator.geolocation) {
@@ -156,7 +156,7 @@
         function showPosition(position) {
             latlon = position.coords.latitude+","+position.coords.longitude;
 
-        });
+        }
     </script>
     <script type="text/javascript">
             var clock;
