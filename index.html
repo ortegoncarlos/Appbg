@@ -55,7 +55,7 @@
                 <div class="mensaje">
                     <p>Este contador nos llevará a entrar en simultánea y comenzar a hacer parte de una gran obra de arte</p>                
                 </div>
-                <div class="espacio"></div>
+            
                 <div class="piedepag">
                     <div class="redes">
                         <div class="facebook">
@@ -95,7 +95,7 @@
                     <input type="text" class="titulo" rows="7" cols="80"></input>
                     <p>¿Dónde tomaste la foto?</p> 
                     <input type="text" class="donde"rows="7" cols="80"></input> 
-                    <p>¿Como es tu email en facebook?</p> 
+                    <p>¿Cual es tu email en facebook?</p> 
                     <input type="email" class="como"rows="7" cols="80"></input> 
                      <h4>Sube una Fotografía</h4>
                 </div>
@@ -148,7 +148,7 @@
 
                 // Set some date in the past. In this case, it's always been since Jan 1
                 // var pastDate  = new Date("2013/08/06 12:12:00");
-                var pastDate  = new Date("2014/07/29 18:00:00");
+                var pastDate  = new Date("2014/07/30 18:00:00");
 
 
 
@@ -284,23 +284,22 @@
 
     </script>
     <script>
-    var latitude;
-    var longitude;
+    
 
-        $(".camera-btn").click(getLocation());
+        $(".camera-btn").click(
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else { 
-                console.log = "Geolocation is not supported by this browser.";
+                navigator.geolocation.getCurrentPosition(showPosition,showError);
+            } else {
+                
             }
         }
 
         function showPosition(position) {
-            latitude = position.coords.latitude; 
-            longitude = position.coords.longitude;  
-        }
+            var latlon = position.coords.latitude+","+position.coords.longitude;
+
+        });
     </script>
 
 </body>

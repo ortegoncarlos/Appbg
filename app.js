@@ -28,8 +28,7 @@
                 "titulo": window.titulo,
                 "donde": window.donde,
                 "como": window.como,
-                "Latitude" : window.latitude,
-                "Longitude" : window.longitude
+                
             };
 
             ft.upload(imageURI, serverURL + "/images",
