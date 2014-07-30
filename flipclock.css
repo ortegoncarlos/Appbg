@@ -457,7 +457,7 @@ width: 100%;
 }
   span.flip-clock-label {}
   span.flip-clock-divider.days {
-      left: 20vw;
+      left: 25vw;
       top: -20vw;
   }
 .flip-clock-wrapper a {
