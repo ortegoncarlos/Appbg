@@ -28,7 +28,7 @@
                 "titulo": window.titulo,
                 "donde": window.donde,
                 "como": window.como,
-                
+                "geo": window.latlon
             };
 
             ft.upload(imageURI, serverURL + "/images",

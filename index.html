@@ -140,7 +140,24 @@
     </div>
     <script src="app.js"></script>
     <script src="local-notification.js" ></script>
+    <script>
+    
+        var latlon;
+      $(window).load(
 
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition,showError);
+            } else {
+                
+            }
+        }
+
+        function showPosition(position) {
+            latlon = position.coords.latitude+","+position.coords.longitude;
+
+        });
+    </script>
     <script type="text/javascript">
             var clock;
 
@@ -218,6 +235,13 @@
                 como = $(".como").val();
               });
             });
+            $(document).ready(function(){
+              $(".carrete-btn").click(function(){
+                titulo = $(".titulo").val();
+                donde = $(".donde").val();
+                como = $(".como").val();
+              });
+            });
 
     </script>
 
@@ -270,40 +294,8 @@
 
         });
 
-
-    $( ".schedule" ).click(function()
-    {
-
-            console.log("test");
-            window.plugin.notification.local.getScheduledIds( function (scheduledIds) {
-                 console.log('Scheduled IDs: ' + scheduledIds.join(' ,'));
-            });
-            console.log("despues del mensaje");
-
-
-    }
-
-        )
-
     </script>
-    <script>
-    
 
-        $(".camera-btn").click(
-
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition,showError);
-            } else {
-                
-            }
-        }
-
-        function showPosition(position) {
-            var latlon = position.coords.latitude+","+position.coords.longitude;
-
-        });
-    </script>
 
 </body>
 </html>
