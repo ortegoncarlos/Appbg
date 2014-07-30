@@ -77,7 +77,6 @@
 
             navigator.camera.getPicture(
                 function (imageURI) {
-                    console.log(imageURI);
                     upload(imageURI);
                 },
                 function (message) {

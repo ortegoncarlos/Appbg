@@ -177,11 +177,9 @@
 
                 if (diff < 0){
                     var diff = 3
-                    console.log=diff
 
                 }else {
                     diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
-                    console.log=diff
                 }
 
 
@@ -268,7 +266,7 @@
     
     function  onDeviceReady(){
 
-       var now                  = new Date("2014/07/29 20:15").getTime(),
+       var now                  = new Date("2014/07/30 6:30").getTime(),
     _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
@@ -284,13 +282,11 @@
         $(document).ready(function(){
 
              onDeviceReady();
-            console.log("document ready");
 
         });
         $(window).load(function(){
 
              onDeviceReady();
-            console.log("window load");
 
         });
 
