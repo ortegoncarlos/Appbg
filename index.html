@@ -267,6 +267,7 @@
        var now                  = new Date("2014/07/30 8:00").getTime(),
     _60_seconds_from_now = new Date(now + 60*1000);
     _60_minutes_from_now = new Date(now + 60*10000);
+    _60_hours_from_now = new Date(now + 360*10000);
 
 
         window.plugin.notification.local.add({
@@ -280,6 +281,12 @@
             title:   'Toma La Foto Ya',
             message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
             date:    _60_minutes_from_now
+        });
+          window.plugin.notification.local.add({
+            id:      2,
+            title:   'Toma La Foto Ya',
+            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
+            date:    _60_hours_from_now
         });
 
     };
