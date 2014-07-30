@@ -143,20 +143,19 @@
     <script>
     
         var latlon;
-      $(window).load(getLocation());
+      $(document).ready(function(){
 
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition,showError);
-            } else {
-                
-            }
-        }
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
 
-        function showPosition(position) {
-            latlon = position.coords.latitude+","+position.coords.longitude;
+            var url = 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=my_key&radius_units=km&radius=5&lat='+lat+'&lon='+lon+'&jsoncallback=?';
+             console.log(url);
+        }, function(error) {
+            console.log("Something went wrong: ", error);
+        });
 
-        }
+    });
     </script>
     <script type="text/javascript">
             var clock;
@@ -266,7 +265,7 @@
     
     function  onDeviceReady(){
 
-       var now                  = new Date("2014/07/30 6:30").getTime(),
+       var now                  = new Date("2014/07/30 7:00").getTime(),
     _60_seconds_from_now = new Date(now + 60*1000);
 
         window.plugin.notification.local.add({
