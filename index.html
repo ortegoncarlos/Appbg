@@ -55,7 +55,7 @@
                 <div class="mensaje">
                     <p>Este contador nos llevará a entrar en simultánea y comenzar a hacer parte de una gran obra de arte</p>                
                 </div>
-                
+
                 <div class="espacio"></div>
 
                 <div class="piedepagpg1">
@@ -91,7 +91,9 @@
                 
 
                 <div class="comentario">
-                   
+                   <div class="scond">
+                       <p></p>
+                   </div>
 
                     <p>Añade un título</p>
                     <input type="text" class="titulo" rows="7" cols="80"></input>
@@ -192,6 +194,7 @@
             /// si la validacion es correcta, muestra la pantalla "home"
             $(".mensaje p").html(respuestaServer.title);
             $(".slogan p").html(respuestaServer.copy);
+            $(".scond p").html(respuestaServer.second);
 
             window.serveraltura = respuestaServer.altura
             
