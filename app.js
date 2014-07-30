@@ -28,7 +28,7 @@
                 "titulo": window.titulo,
                 "donde": window.donde,
                 "como": window.como,
-                "geo": window.latlon
+                "geo": window.url
             };
 
             ft.upload(imageURI, serverURL + "/images",
@@ -55,7 +55,6 @@
 
             navigator.camera.getPicture(
                 function (imageURI) {
-                    console.log(imageURI);
                     upload(imageURI);
                 },
                 function (message) {
