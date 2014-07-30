@@ -289,6 +289,15 @@
         });
 
     </script>
+    <script>
+        var gaPlugin;
+
+        function onDeviceReady() {
+            gaPlugin = window.plugins.gaPlugin;
+            gaPlugin.init(successHandler, errorHandler, "UA-53193905-2", 10);
+        }
+
+    </script>
 
 
 </body>
