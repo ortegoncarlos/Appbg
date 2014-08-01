@@ -35,11 +35,15 @@
             ft.onprogress = function(progressEvent) {
                 console.log(progressEvent.lengthComputable)
             if (progressEvent.lengthComputable) {
-              loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
-              console.log(progressEvent);
+              var x = loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+               if (x < 1){
+               $(".botoneswrap").FadeOut();
+
+               } else {
+               }
             } else {
               loadingStatus.increment();
-              console.log(progressEvent);
+              
             }
 };
 
@@ -47,10 +51,12 @@
                 function (e) {
                     getFeed();
                     alert("Imagen Subida");
+                     $(".botoneswrap").FadeIn();
 
                 },
                 function (e) {
                     alert("Upload failed");
+                     $(".botoneswrap").FadeIn();
                 }, options);
         },
 
