@@ -89,18 +89,13 @@
             navigator.camera.getPicture(
                 function (imageURI) {                  
                     upload(imageURI);
-                    var c = document.getElementById("instacanvas");
+                    var c = ("#instacanvas");
                     var ctx = c.getContext("2d");
                     var imgx = imageURI;
                     ctx.drawImage(imgx,10,10);
-                    console.log(C+" : "+ctx+" : "+ img)
-                    Instagram.isInstalled(function (err, installed) {
-                    if (installed) {
-                        console.log("Instagram is installed");
-                        
-                    } else {
-                        console.log("Instagram is not installed");
-                    }
+                    console.log(ctx);
+                    console.log(img);
+                    console.log(c);
                     Instagram.share( 'instacanvas' ,'example caption', function (err) {
                             if (err) {
                                 console.log("not shared");
