@@ -80,15 +80,19 @@
                 quality: 45,
                 targetWidth: 1000,
                 targetHeight: 1000,
-                destinationType: Camera.DestinationType.DATA_URL,
+                destinationType: Camera.DestinationType.FILE_URI,
                 encodingType: Camera.EncodingType.JPEG,
                 sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
 
             navigator.camera.getPicture(
-                function (imageData) {
-                    console.loge(imageData)
-                    upload(imageData);
+                function (imageURI) {
+                    console.log(imageURI)
+                    upload(imageURI);
+                    var c = document.getElementById("instacanvas");
+                    var ctx = c.getContext("2d");
+                    var img = imageURI;
+                    ctx.drawImage(img,10,10);
                     Instagram.isInstalled(function (err, installed) {
                     if (installed) {
                         console.log("Instagram is installed");
@@ -96,7 +100,7 @@
                     } else {
                         console.log("Instagram is not installed");
                     }
-                    Instagram.share(imageData, function (err) {
+                    Instagram.share( 'instacanvas' ,'example caption', function (err) {
                             if (err) {
                                 console.log("not shared");
                             } else {
