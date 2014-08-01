@@ -141,9 +141,9 @@
                     <p>¿Cual es tu email en facebook?</p> 
                     <input type="email" class="como"rows="7" cols="80"></input> 
                      <h4>Sube una Fotografía</h4>
+                     <h4 class="cargando">Cargando Imagen...</h4>
                 </div>
-                <div class="botoneswrap">
-                    <h3 class="cargando">Cargando Imagen...</h3>
+                <div class="botoneswrap">                
                     <div class="botones">
                         <div class="round-buttonphoto">
                             <a class="camera-btn" href="#">
@@ -169,7 +169,6 @@
     <script>
     
       $(window).load(function(){
-
         navigator.geolocation.getCurrentPosition(function(position) {
             var lat = position.coords.latitude;
             var lon = position.coords.longitude;
