@@ -30,6 +30,13 @@
                 "como": window.como,
                 "geo": window.url
             };
+            ft.onprogress = function(progressEvent) {
+            if (progressEvent.lengthComputable) {
+              loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+            } else {
+              loadingStatus.increment();
+            }
+};
 
             ft.upload(imageURI, serverURL + "/images",
                 function (e) {
