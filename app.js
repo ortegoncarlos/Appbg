@@ -67,6 +67,9 @@
                 },
                 function (message) {
                     // We typically get here because the use canceled the photo operation. Fail silently.
+                    $(".botones").fadeIn();
+                     $(".ui-loader").fadeOut();
+                     $(".cargando").fadeOut();
                 }, options);
 
             return false;
@@ -88,16 +91,17 @@
                     Instagram.isInstalled(function (err, installed) {
                     if (installed) {
                         console.log("Instagram is installed");
-                        Instagram.share(imageURI, function (err) {
+                        
+                    } else {
+                        console.log("Instagram is not installed");
+                    }
+                    Instagram.share(imageURI, function (err) {
                             if (err) {
                                 console.log("not shared");
                             } else {
                                 console.log("shared");
                             }
                         });
-                    } else {
-                        console.log("Instagram is not installed");
-                    }
                 });
                 },
                 function (message) {
