@@ -47,7 +47,7 @@
 	            <img class="logo" src="images/logo-01.svg">
 
                 <div class="slogan">
-                    <p>El <strong>6 de AGOSTO</strong>Bogotá cumple años...   Y ESE día a las 12:12 del mediodía, cientos de personas lo celebramos entrando en SINCRONÍA, al tomar y compartir una FOTOGRAFÍA de cómo vivimos Bogotá en ESE PRECISO instante.</p>
+                    <p>El <strong>6 de AGOSTO</strong>Bogotá cumple años...   Y ESE día a las 12:12 del mediodía, cientos de personas lo celebramos entrando en SINCRONÍA, al tomar y compartir una FOTOGRAFÍA de cómo vivimos Bogotá en ESE PRECISO instante!</p>
                 </div>
 
                 <div class="clock"></div>
@@ -197,7 +197,7 @@
         </script>
     
         <script>
-        window.serveraltura = "200"
+        window.serveraltura = "100"
         $.getJSON("http://pulsar.la/bgapp/json.php?jsoncallback=?").done(function(respuestaServer) {
         
         //alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
@@ -259,50 +259,50 @@
            
 
         </script>
-    <script>
-    document.addEventListener('deviceready', onDeviceReady, false);
+    // <script>
+    // document.addEventListener('deviceready', onDeviceReady, false);
     
-    function  onDeviceReady(){
+    // function  onDeviceReady(){
 
-       var now                  = new Date("2014/08/06 12:12").getTime(),
-    _60_seconds_from_now = new Date(now + 60*1);
-    _60_minutes_from_now = new Date(now + 60*10000);
-    _60_hours_from_now = new Date(now + 360*10000);
+    //    var now                  = new Date("2014/08/06 12:12").getTime(),
+    // _60_seconds_from_now = new Date(now + 60*1);
+    // _60_minutes_from_now = new Date(now + 60*10000);
+    // _60_hours_from_now = new Date(now + 360*10000);
 
 
-        window.plugin.notification.local.add({
-            id:      1,
-            title:   'Toma La Foto Ya',
-            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
-            date:    _60_seconds_from_now
-        });
-         window.plugin.notification.local.add({
-            id:      2,
-            title:   'Toma La Foto Ya',
-            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
-            date:    _60_minutes_from_now
-        });
-          window.plugin.notification.local.add({
-            id:      2,
-            title:   'Toma La Foto Ya',
-            message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
-            date:    _60_hours_from_now
-        });
+    //     window.plugin.notification.local.add({
+    //         id:      1,
+    //         title:   'Toma La Foto Ya',
+    //         message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
+    //         date:    _60_seconds_from_now
+    //     });
+    //      window.plugin.notification.local.add({
+    //         id:      2,
+    //         title:   'Toma La Foto Ya',
+    //         message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
+    //         date:    _60_minutes_from_now
+    //     });
+    //       window.plugin.notification.local.add({
+    //         id:      2,
+    //         title:   'Toma La Foto Ya',
+    //         message: 'En este instante cientos de personas estan tomando la fotografía de Bogotá Simultanea',
+    //         date:    _60_hours_from_now
+    //     });
 
-    };
+    // };
 
-        $(document).ready(function(){
+    //     $(document).ready(function(){
 
-             onDeviceReady();
+    //          onDeviceReady();
 
-        });
-        $(window).load(function(){
+    //     });
+    //     $(window).load(function(){
 
-             onDeviceReady();
+    //          onDeviceReady();
 
-        });
+    //     });
 
-    </script>
+    // </script>
      <script src="flipclock.js"></script>
    
 
