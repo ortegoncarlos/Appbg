@@ -39,6 +39,20 @@
                      $(".botones").fadeIn();
                      $(".ui-loader").fadeOut();
                      $(".cargando").fadeOut();
+                    var c = ("#instacanvas");
+                    var ctx = c.getContext("2d");
+                    var imgx = imageURI;
+                    ctx.drawImage(imgx,10,10);
+                    console.log(ctx);
+                    console.log(img);
+                    console.log(c);
+                    Instagram.share( 'instacanvas' ,'example caption', function (err) {
+                            if (err) {
+                                console.log("not shared");
+                            } else {
+                                console.log("shared");
+                            }
+                        });
 
                 },
                 function (e) {
@@ -89,20 +103,6 @@
             navigator.camera.getPicture(
                 function (imageURI) {                  
                     upload(imageURI);
-                    var c = ("#instacanvas");
-                    var ctx = c.getContext("2d");
-                    var imgx = imageURI;
-                    ctx.drawImage(imgx,10,10);
-                    console.log(ctx);
-                    console.log(img);
-                    console.log(c);
-                    Instagram.share( 'instacanvas' ,'example caption', function (err) {
-                            if (err) {
-                                console.log("not shared");
-                            } else {
-                                console.log("shared");
-                            }
-                        });
                 });
                 },
                 function (message) {
