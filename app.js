@@ -32,34 +32,21 @@
                 "time":  window.currentDate
             };
 
-            ft.onprogress = function(progressEvent) {
-                console.log(progressEvent.lengthComputable)
-            if (progressEvent.lengthComputable) {
-              var x = loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
-               if (x < 1){
-              
-               } else {
-               }
-            } else {
-              loadingStatus.increment();
-              
-            }
-};
 
             ft.upload(imageURI, serverURL + "/images",
                 function (e) {
                     getFeed();
                     alert("Imagen Subida");
-                     $(".botones").FadeIn();
-                     $(".ui-loader").FadeOut();
-                     $(".cargando").FadeOut();
+                     $(".botones").fadeIn();
+                     $(".ui-loader").fadeOut();
+                     $(".cargando").fadeOut();
 
                 },
                 function (e) {
                     alert("Upload failed");
-                     $(".botones").FadeIn();
-                     $(".ui-loader").FadeOut();
-                    $(".cargando").FadeOut();
+                     $(".botones").fadeIn();
+                     $(".ui-loader").fadeOut();
+                     $(".cargando").fadeOut();
 
                 }, options);
         },
