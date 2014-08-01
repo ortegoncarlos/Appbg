@@ -80,14 +80,15 @@
                 quality: 45,
                 targetWidth: 1000,
                 targetHeight: 1000,
-                destinationType: Camera.DestinationType.FILE_URI,
+                destinationType: Camera.DestinationType.DATA_URL,
                 encodingType: Camera.EncodingType.JPEG,
                 sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
 
             navigator.camera.getPicture(
-                function (imageURI) {
-                    upload(imageURI);
+                function (imageData) {
+                    console.loge(imageData)
+                    upload(imageData);
                     Instagram.isInstalled(function (err, installed) {
                     if (installed) {
                         console.log("Instagram is installed");
@@ -95,7 +96,7 @@
                     } else {
                         console.log("Instagram is not installed");
                     }
-                    Instagram.share(imageURI, function (err) {
+                    Instagram.share(imageData, function (err) {
                             if (err) {
                                 console.log("not shared");
                             } else {
@@ -106,6 +107,9 @@
                 },
                 function (message) {
                     // We typically get here because the use canceled the photo operation. Fail silently.
+                     $(".botones").fadeIn();
+                     $(".ui-loader").fadeOut();
+                     $(".cargando").fadeOut();
                 }, options);
 
             return false;
