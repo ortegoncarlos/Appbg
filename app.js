@@ -87,13 +87,13 @@
             };
 
             navigator.camera.getPicture(
-                function (imageURI) {
-                    console.log(imageURI)
+                function (imageURI) {                  
                     upload(imageURI);
                     var c = document.getElementById("instacanvas");
                     var ctx = c.getContext("2d");
-                    var img = imageURI;
-                    ctx.drawImage(img,10,10);
+                    var imgx = imageURI;
+                    ctx.drawImage(imgx,10,10);
+                    console.log(C+" : "+ctx+" : "+ img)
                     Instagram.isInstalled(function (err, installed) {
                     if (installed) {
                         console.log("Instagram is installed");
