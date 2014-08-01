@@ -82,7 +82,8 @@
                 targetHeight: 1000,
                 destinationType: Camera.DestinationType.FILE_URI,
                 encodingType: Camera.EncodingType.JPEG,
-                sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                saveToPhotoAlbum: true
             };
 
             navigator.camera.getPicture(
