@@ -37,10 +37,7 @@
             if (progressEvent.lengthComputable) {
               var x = loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
                if (x < 1){
-               $(".botones").FadeOut();
-               $(".ui-loader").fadeIn();
-               $(".cargando").FadeIn();
-
+              
                } else {
                }
             } else {
