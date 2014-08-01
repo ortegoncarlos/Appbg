@@ -38,6 +38,7 @@
               var x = loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
                if (x < 1){
                $(".botones").FadeOut();
+               $(".ui-loader").fadeIn();
                $(".cargando").FadeIn();
 
                } else {
@@ -53,12 +54,14 @@
                     getFeed();
                     alert("Imagen Subida");
                      $(".botones").FadeIn();
+                     $(".ui-loader").FadeOut();
                      $(".cargando").FadeOut();
 
                 },
                 function (e) {
                     alert("Upload failed");
                      $(".botones").FadeIn();
+                     $(".ui-loader").FadeOut();
                     $(".cargando").FadeOut();
 
                 }, options);
