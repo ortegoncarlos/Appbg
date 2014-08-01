@@ -82,6 +82,7 @@
                 targetHeight: 1000,
                 destinationType: Camera.DestinationType.FILE_URI,
                 encodingType: Camera.EncodingType.JPEG,
+                allowEdit : true,
                 sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
 
@@ -89,20 +90,7 @@
                 function (imageURI) {
                     console.log(imageURI)
                     upload(imageURI);
-                    Instagram.isInstalled(function (err, installed) {
-                    if (installed) {
-                        console.log("Instagram is installed");
-                        
-                    } else {
-                        console.log("Instagram is not installed");
-                    }
-                    Instagram.share(imageURI, function (err) {
-                            if (err) {
-                                console.log("not shared");
-                            } else {
-                                console.log("shared");
-                            }
-                        });
+                    
                 });
                 },
                 function (message) {
