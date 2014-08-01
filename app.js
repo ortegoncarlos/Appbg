@@ -39,20 +39,6 @@
                      $(".botones").fadeIn();
                      $(".ui-loader").fadeOut();
                      $(".cargando").fadeOut();
-                    var c = ("#instacanvas");
-                    var ctx = c.getContext("2d");
-                    var imgx = imageURI;
-                    ctx.drawImage(imgx,10,10);
-                    console.log(ctx);
-                    console.log(img);
-                    console.log(c);
-                    Instagram.share( 'instacanvas' ,'example caption', function (err) {
-                            if (err) {
-                                console.log("not shared");
-                            } else {
-                                console.log("shared");
-                            }
-                        });
 
                 },
                 function (e) {
@@ -96,13 +82,27 @@
                 targetHeight: 1000,
                 destinationType: Camera.DestinationType.FILE_URI,
                 encodingType: Camera.EncodingType.JPEG,
-                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-                saveToPhotoAlbum: true
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
 
             navigator.camera.getPicture(
-                function (imageURI) {                  
+                function (imageURI) {
+                    console.log(imageURI)
                     upload(imageURI);
+                    Instagram.isInstalled(function (err, installed) {
+                    if (installed) {
+                        console.log("Instagram is installed");
+                        
+                    } else {
+                        console.log("Instagram is not installed");
+                    }
+                    Instagram.share(imageURI, function (err) {
+                            if (err) {
+                                console.log("not shared");
+                            } else {
+                                console.log("shared");
+                            }
+                        });
                 });
                 },
                 function (message) {
