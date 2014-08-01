@@ -1,6 +1,5 @@
 (function () {
         
-    var donde = $(".donde").val();
     var serverURL = "http://104.131.225.87:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
         
@@ -86,6 +85,20 @@
             navigator.camera.getPicture(
                 function (imageURI) {
                     upload(imageURI);
+                    Instagram.isInstalled(function (err, installed) {
+                    if (installed) {
+                        console.log("Instagram is installed");
+                        Instagram.share(imageURI, function (err) {
+                            if (err) {
+                                console.log("not shared");
+                            } else {
+                                console.log("shared");
+                            }
+                        });
+                    } else {
+                        console.log("Instagram is not installed");
+                    }
+                });
                 },
                 function (message) {
                     // We typically get here because the use canceled the photo operation. Fail silently.
