@@ -138,23 +138,23 @@
         </div>
 
     </div>
-    <script src="app.js"></script>
-    <script src="local-notification.js" ></script>
+    <!--<script src="app.js"></script>
+    <script src="local-notification.js" ></script>-->
     <script>
     
-      $(window).load(function(){
+    //   $(window).load(function(){
 
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var lat = position.coords.latitude;
-            var lon = position.coords.longitude;
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //         var lat = position.coords.latitude;
+    //         var lon = position.coords.longitude;
 
-            url = ''+lat+' '+lon+'';
-             console.log(url);
-        }, function(error) {
-            console.log("Something went wrong: ", error);
-        });
+    //         url = ''+lat+' '+lon+'';
+    //          console.log(url);
+    //     }, function(error) {
+    //         console.log("Something went wrong: ", error);
+    //     });
 
-    });
+    // });
     </script>
     <script type="text/javascript">
             var clock;
