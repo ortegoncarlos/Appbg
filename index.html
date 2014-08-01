@@ -19,6 +19,7 @@
 
            
 
+<script src="countdown.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -51,45 +52,17 @@
 
     // });
     </script>
-    <script type="text/javascript">
-            var clock;
 
-            $(document).ready(function() {
+<script type="application/javascript">
+var myCountdown1 = new Countdown({
+                                    time: 86400 * 3, // 86400 seconds = 1 day
+                                    width:300, 
+                                    height:60,  
+                                    rangeHi:"day",
+                                    style:"flip"    // <- no comma on last item!
+                                    });
 
-                // Grab the current date
-
-                var currentDate = new Date();
-
-                // Set some date in the past. In this case, it's always been since Jan 1
-                // var pastDate  = new Date("2013/08/06 12:12:00");
-                var pastDate  = new Date("2014/08/06 12:12:00");
-
-                // Calculate the difference in seconds between the future and current date
-
-                var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-                if (diff < 0){
-                    var diff = 3
-
-                }else {
-                    diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
-                }
-
-
-                // Instantiate a coutdown FlipClock
-                clock = $('.clock').FlipClock(diff,{
-                    clockFace: 'DailyCounter',
-                    language:'es',
-                    countdown: true,
-                    callbacks: {
-                    stop: function() {
-                          
-                          $.mobile.changePage("#page2");
-                    }
-                }
-                });
-            });
-        </script>
+</script>
     
     //     <script>
     //     window.serveraltura = "100"
