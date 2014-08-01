@@ -37,7 +37,8 @@
             if (progressEvent.lengthComputable) {
               var x = loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
                if (x < 1){
-               $(".botoneswrap").FadeOut();
+               $(".botones").FadeOut();
+               $(".cargando").FadeIn();
 
                } else {
                }
@@ -51,12 +52,15 @@
                 function (e) {
                     getFeed();
                     alert("Imagen Subida");
-                     $(".botoneswrap").FadeIn();
+                     $(".botones").FadeIn();
+                     $(".cargando").FadeOut();
 
                 },
                 function (e) {
                     alert("Upload failed");
-                     $(".botoneswrap").FadeIn();
+                     $(".botones").FadeIn();
+                    $(".cargando").FadeOut();
+
                 }, options);
         },
 
