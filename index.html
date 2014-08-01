@@ -196,46 +196,7 @@
 
     });
     </script>
-    <script type="text/javascript">
-            // var clock;
 
-            // $(document).ready(function() {
-
-            //     // Grab the current date
-
-            //     var currentDate = new Date();
-
-            //     // Set some date in the past. In this case, it's always been since Jan 1
-            //     // var pastDate  = new Date("2013/08/06 12:12:00");
-            //     var pastDate  = new Date("2014/08/06 12:12:00");
-
-            //     // Calculate the difference in seconds between the future and current date
-
-            //     var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-            //     if (diff < 0){
-            //         var diff = 3
-
-            //     }else {
-            //         diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
-            //     }
-
-
-            //     // Instantiate a coutdown FlipClock
-            //     clock = $('.clock').FlipClock(diff,{
-            //         clockFace: 'DailyCounter',
-            //         language:'es',
-            //         countdown: true,
-            //         callbacks: {
-            //         stop: function() {
-                          
-            //               $.mobile.changePage("#page2");
-            //         }
-            //     }
-            //     });
-            // });
-        </script>
-    
         <script>
         window.serveraltura = "200"
         $.getJSON("http://pulsar.la/bgapp/json.php?jsoncallback=?").done(function(respuestaServer) {
@@ -304,7 +265,7 @@
     
     function  onDeviceReady(){
 
-       var now                  = new Date("2014/08/06 12:12").getTime(),
+       var now                  = new Date("2014/08/01 13:12").getTime(),
     _60_seconds_from_now = new Date(now + 60*1);
     _60_minutes_from_now = new Date(now + 60*10000);
     _60_hours_from_now = new Date(now + 360*10000);
@@ -343,7 +304,6 @@
         });
 
     </script>
-     <script src="flipclock.js"></script>
    
 
 
