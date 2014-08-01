@@ -28,13 +28,17 @@
                 "titulo": window.titulo,
                 "donde": window.donde,
                 "como": window.como,
-                "geo": window.url
+                "geo": window.url,
+                "time":  window.currentDate
             };
+
             ft.onprogress = function(progressEvent) {
             if (progressEvent.lengthComputable) {
               loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+              console.log(loadingStatus)
             } else {
               loadingStatus.increment();
+              console.log(loadingStatus)
             }
 };
 
