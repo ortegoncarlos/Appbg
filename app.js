@@ -33,12 +33,13 @@
             };
 
             ft.onprogress = function(progressEvent) {
+                console.log(progressEvent.lengthComputable)
             if (progressEvent.lengthComputable) {
               loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
-              console.log(loadingStatus)
+              console.log(progressEvent);
             } else {
               loadingStatus.increment();
-              console.log(loadingStatus)
+              console.log(progressEvent);
             }
 };
 
