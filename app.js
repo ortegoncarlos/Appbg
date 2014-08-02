@@ -100,7 +100,7 @@
 
         share = function(){
              // var fbMsg = 'Esta es mi foto para @BtaSimultanea, se llama '+window.titulo+', la tome en 'window.donde+' a las #12:12, yo soy #BogotaSimultanea';
-             var fbMsg = 'Esta'
+             var fbMsg = 'Esta';
              window.plugins.socialsharing.shareViaFacebook(
                   fbMsg,
                   [window.img,'www/image.gif'],
