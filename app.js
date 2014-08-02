@@ -64,7 +64,6 @@
             navigator.camera.getPicture(
                 function (imageURI) {
                     upload(imageURI);
-                     window.plugins.socialsharing.share(null, null, imageURI, null);
 
                 },
                 function (message) {
@@ -84,13 +83,11 @@
                 targetHeight: 1000,
                 destinationType: Camera.DestinationType.FILE_URI,
                 encodingType: Camera.EncodingType.JPEG,
-                allowEdit : true,
                 sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
 
             navigator.camera.getPicture(
                 function (imageURI) {
-                    console.log(imageURI)
                     upload(imageURI);
                     
                 });
