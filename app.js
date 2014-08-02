@@ -1,5 +1,6 @@
 (function () {
         
+    var donde = $(".donde").val();
     var serverURL = "http://104.131.225.87:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
         
@@ -64,13 +65,9 @@
             navigator.camera.getPicture(
                 function (imageURI) {
                     upload(imageURI);
-
                 },
                 function (message) {
                     // We typically get here because the use canceled the photo operation. Fail silently.
-                    $(".botones").fadeIn();
-                     $(".ui-loader").fadeOut();
-                     $(".cargando").fadeOut();
                 }, options);
 
             return false;
@@ -89,14 +86,9 @@
             navigator.camera.getPicture(
                 function (imageURI) {
                     upload(imageURI);
-                    
-                });
                 },
                 function (message) {
                     // We typically get here because the use canceled the photo operation. Fail silently.
-                     $(".botones").fadeIn();
-                     $(".ui-loader").fadeOut();
-                     $(".cargando").fadeOut();
                 }, options);
 
             return false;
