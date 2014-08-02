@@ -39,7 +39,6 @@
                      $(".botones").fadeIn();
                      $(".ui-loader").fadeOut();
                      $(".cargando").fadeOut();
-                     window.plugins.socialsharing.share(null, null, imageURI, null)
 
                 },
                 function (e) {
@@ -65,6 +64,8 @@
             navigator.camera.getPicture(
                 function (imageURI) {
                     upload(imageURI);
+                     window.plugins.socialsharing.share(null, null, imageURI, null);
+
                 },
                 function (message) {
                     // We typically get here because the use canceled the photo operation. Fail silently.
