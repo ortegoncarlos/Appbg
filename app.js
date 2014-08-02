@@ -37,7 +37,6 @@
                 function (e) {
                     getFeed();
                     share();
-                    alert("Imagen Subida");
                      $(".botones").fadeIn();
                      $(".ui-loader").fadeOut();
                      $(".cargando").fadeOut();
