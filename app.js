@@ -39,6 +39,7 @@
                      $(".botones").fadeIn();
                      $(".ui-loader").fadeOut();
                      $(".cargando").fadeOut();
+                     window.plugins.socialsharing.share(null, null, imageURI, null)
 
                 },
                 function (e) {
