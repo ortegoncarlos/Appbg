@@ -100,9 +100,9 @@
         },
 
         share = function(){
-             // var fbMsg = 'Esta es mi foto para @BtaSimultanea, se llama '+window.titulo+', la tome en 'window.donde+' a las #12:12, yo soy #BogotaSimultanea';
+             var fbMsg = 'Esta es mi foto para @BtaSimultanea, se llama '+window.titulo+', la tome en 'window.donde+' a las #12:12, yo soy #BogotaSimultanea';
              window.plugins.socialsharing.shareViaFacebook(
-                  'Esta es mi foto para @BtaSimultanea se llama  #BogotaSimultanea #12:12',
+                  fbMsg,
                   [window.img,'www/image.gif'],
                   null);
 
