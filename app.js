@@ -36,6 +36,7 @@
             ft.upload(imageURI, serverURL + "/images",
                 function (e) {
                     getFeed();
+                    share();
                     alert("Imagen Subida");
                      $(".botones").fadeIn();
                      $(".ui-loader").fadeOut();
@@ -63,7 +64,9 @@
             };
 
             navigator.camera.getPicture(
+
                 function (imageURI) {
+                    img = imageURI;
                     upload(imageURI);
                 },
                 function (message) {
@@ -85,6 +88,7 @@
 
             navigator.camera.getPicture(
                 function (imageURI) {
+                    img = imageURI;
                     upload(imageURI);
                 },
                 function (message) {
@@ -92,6 +96,15 @@
                 }, options);
 
             return false;
+
+        },
+
+        share = function(){
+             var fbMsg = 'Esta es mi foto para @BtaSimultanea, se llama '+window.titulo+', la tome en 'window.donde+' a las #12:12, yo soy #BogotaSimultanea'
+             window.plugins.socialsharing.shareViaFacebook(
+                  'Esta es mi foto para @BtaSimultanea se llama  #BogotaSimultanea #12:12',
+                  [window.img,'www/image.gif'],
+                  null);
 
         };
 
