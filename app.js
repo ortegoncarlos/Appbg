@@ -100,7 +100,7 @@
 
         share = function(){
              var fbMsg = 'Esta es mi foto para @BtaSimultanea, se llama '+ window.titulo +', la tome en '+ window.donde +' a las #12:12, yo soy #BogotaSimultanea';
-             
+             var twMsg = 'Hoy a las #12:12 subí mi foto a @BogotaSimultanea se llama '+ window.titulo;
             if (navigator.userAgent.indexOf('Mac') != -1) {
 
                 window.plugins.socialsharing.canShareVia('facebook', 'msg', null, null, null, 
@@ -129,7 +129,7 @@
 
                     function(e){
 
-                        window.plugins.socialsharing.shareViaTwitter("Hoy a las #12:12 subí mi foto a @BogotaSimultanea");
+                        window.plugins.socialsharing.shareViaTwitter(twMsg);
 
                     })
 
