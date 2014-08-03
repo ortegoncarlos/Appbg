@@ -100,7 +100,42 @@
 
         share = function(){
              var fbMsg = 'Esta es mi foto para @BtaSimultanea, se llama '+ window.titulo +', la tome en '+ window.donde +' a las #12:12, yo soy #BogotaSimultanea';
-             window.plugins.socialsharing.shareViaTwitter(fbMsg,[window.img,'www/image.gif'],null);
+             
+            if (navigator.userAgent.indexOf('Mac') != -1) {
+
+                window.plugins.socialsharing.canShareVia('facebook', 'msg', null, null, null, 
+
+                    function(e){
+
+                        window.plugins.socialsharing.shareViaFacebook(fbMsg,[window.img],null);
+                    },
+
+                    function(e){
+
+                        window.plugins.socialsharing.shareViaTwitter("Hoy a las #12:12 subí mi foto a @BogotaSimultanea");
+
+                    })
+
+
+            }else{
+
+                window.plugins.socialsharing.canShareVia('facebook', 'msg', null, null, null, 
+
+                    function(e){
+
+                        window.plugins.socialsharing.shareViaFacebook(null,[window.img],null);
+
+                    }, 
+
+                    function(e){
+
+                        window.plugins.socialsharing.shareViaTwitter("Hoy a las #12:12 subí mi foto a @BogotaSimultanea");
+
+                    })
+
+
+            }
+                
 
         };
 
