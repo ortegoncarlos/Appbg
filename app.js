@@ -108,7 +108,7 @@
                         window.plugins.socialsharing.shareViaFacebook(null,[window.img],null);
 
 
-            }
+            };
                 
 
         };
