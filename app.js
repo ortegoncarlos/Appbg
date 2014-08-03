@@ -103,7 +103,8 @@
             if (navigator.userAgent.indexOf('Mac') != -1) {
 
                         window.plugins.socialsharing.shareViaFacebook(fbMsg,[window.img],null);
-            }else{
+            };
+            if (navigator.userAgent.indexOf('Android') != -1){
 
                         window.plugins.socialsharing.shareViaFacebook(null,[window.img],null);
 
