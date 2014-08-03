@@ -54,11 +54,11 @@ var CountdownWidth = 200;
 var CountdownHeight = 30;
 
 var CountdownLabels = {
-	second 	: "SECONDS",
-	minute 	: "MINUTES",
-	hour	: "HOURS",
-	day 	: "DAYS",
-	month 	: "MONTHS",
+	second 	: "segundos",
+	minute 	: "minutos",
+	hour	: "horas",
+	day 	: "días",
+	month 	: "mes",
 	year 	: "YEARS"	
 };
 
